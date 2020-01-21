@@ -12,6 +12,7 @@ example and uses the values that were input into the function:
 */
 
 export function sum(a, b) {
+    return [a + b, `The sum of ${a} and ${b} is ${a + b}.`];
 
 }
 
@@ -26,6 +27,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 */
 
 export function multiply(a, b) {
+    return [a * b, `The product of ${a} and ${b} is ${a * b}.`];
 
 }
 
@@ -51,7 +53,9 @@ how to do this. However, you may continue to use the + operator for string conca
 */
 
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
-
+    const sumTotal = sum(sum(a, b)[0], c)[0];
+    const productTotal = multiply(multiply(a, b)[0], c)[0];
+    return [sumTotal, productTotal, `${a} and ${b} and ${c} sum to ${sumTotal}.`, `The product of ${a} and ${b} and ${c} is ${productTotal}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
