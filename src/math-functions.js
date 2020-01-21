@@ -74,9 +74,9 @@ have to be resourceful to figure out how to do this. However, you may continue
 to use the + operator for string concatenation.
 */
 
-export function sumArrayWithThreeNumbers(sumArr) {
-    const sumTotal = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
-    return [sumTotal, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`];
+export function sumArrayWithThreeNumbers(sumArray) {
+    const sumTotal = sum(sum(sumArray[0], sumArray[1])[0], sumArray[2])[0];
+    return [sumTotal, `${sumArray[0]},${sumArray[1]},${sumArray[2]} was passed in as an array of numbers, and ${sumTotal} is their sum.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -98,8 +98,9 @@ This function should handle an array containing three elements. However,
 you may continue to use the + operator for string concatenation.
 */
 
-export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
-
+export function multiplyArrayWithThreeNumbers(multArray) { //eslint-disable-line
+    const productTotal = multiply(multiply(multArray[0], multArray[1])[0], multArray[2])[0];
+    return [productTotal, `The numbers ${multArray[0]},${multArray[1]},${multArray[2]} have a product of ${productTotal}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
